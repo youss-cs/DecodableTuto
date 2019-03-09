@@ -10,9 +10,9 @@ import UIKit
 
 class DetailAnimeHeaderCell: UITableViewHeaderFooterView {
     
-    var anime: Anime? {
+    var animeViewModel: AnimeViewModel? {
         didSet {
-            guard let imageUrl = anime?.image_url else { return }
+            guard let imageUrl = animeViewModel?.imageUrl else { return }
             photoImageView.loadImage(imageUrl: imageUrl)
         }
     }

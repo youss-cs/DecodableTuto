@@ -10,7 +10,7 @@ import UIKit
 
 class DetailAnimeVC: UITableViewController {
     
-    var anime: Anime?
+    var animeViewModel: AnimeViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class DetailAnimeVC: UITableViewController {
     }
     
     func setupView() {
-        title = anime?.title
+        title = animeViewModel?.title
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
@@ -35,7 +35,7 @@ class DetailAnimeVC: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.anime = anime
+        cell.animeViewModel = animeViewModel
         return cell
     }
     
@@ -47,7 +47,7 @@ class DetailAnimeVC: UITableViewController {
         guard let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as? DetailAnimeHeaderCell else {
             return UITableViewCell()
         }
-        cell.anime = anime
+        cell.animeViewModel = animeViewModel
         return cell
     }
     

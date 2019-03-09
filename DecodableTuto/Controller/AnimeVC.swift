@@ -10,14 +10,14 @@ import UIKit
 
 class AnimeVC: UITableViewController {
     
-    var animes = [Anime]()
+    var animeViewModels = [AnimeViewModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         AnimeService.instance.getAnimes { (animes) in
-            self.animes = animes
+            self.animeViewModels = animes.map{AnimeViewModel(anime: $0)}
             self.tableView.reloadData()
         }
     }
@@ -38,18 +38,18 @@ class AnimeVC: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.anime = animes[indexPath.row]
+        cell.animeViewModel = animeViewModels[indexPath.row]
         return cell
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animes.count
+        return animeViewModels.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let anime = animes[indexPath.row]
+        let animeViewModel = animeViewModels[indexPath.row]
         let vc = DetailAnimeVC(style: .grouped)
-        vc.anime = anime
+        vc.animeViewModel = animeViewModel
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

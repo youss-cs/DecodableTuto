@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1E3657B2234350200F92F4F /* AnimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E3657A2234350200F92F4F /* AnimeViewModel.swift */; };
 		A1F2E19E222198CE0055BCB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2E19D222198CE0055BCB4 /* AppDelegate.swift */; };
 		A1F2E1A0222198CE0055BCB4 /* AnimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2E19F222198CE0055BCB4 /* AnimeVC.swift */; };
 		A1F2E1A3222198CE0055BCB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F2E1A1222198CE0055BCB4 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1E3657A2234350200F92F4F /* AnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewModel.swift; sourceTree = "<group>"; };
 		A1F2E19A222198CE0055BCB4 /* DecodableTuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecodableTuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F2E19D222198CE0055BCB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1F2E19F222198CE0055BCB4 /* AnimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeVC.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1E36579223434C300F92F4F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1E3657A2234350200F92F4F /* AnimeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A1F2E191222198CE0055BCB4 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 				A1F2E1B422219BFC0055BCB4 /* Services */,
 				A1F2E1AF222198D50055BCB4 /* Model */,
 				A1F2E1B0222198E40055BCB4 /* View */,
+				A1E36579223434C300F92F4F /* ViewModel */,
 				A1F2E1B1222198F10055BCB4 /* Controller */,
 				A1F2E19D222198CE0055BCB4 /* AppDelegate.swift */,
 				A1F2E1A1222198CE0055BCB4 /* Main.storyboard */,
@@ -211,6 +222,7 @@
 				A1F2E1BF2221B1960055BCB4 /* CustomImageView.swift in Sources */,
 				A1F2E1B922219CD90055BCB4 /* Constants.swift in Sources */,
 				A1F2E1B622219C240055BCB4 /* AnimeService.swift in Sources */,
+				A1E3657B2234350200F92F4F /* AnimeViewModel.swift in Sources */,
 				A1F2E1BB22219D2D0055BCB4 /* Extensions+UIView.swift in Sources */,
 				A1F2E1C32221C69B0055BCB4 /* DetailAnimeVC.swift in Sources */,
 				A1F2E1C52221CA970055BCB4 /* DetailAnimeCell.swift in Sources */,

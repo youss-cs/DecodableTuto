@@ -10,12 +10,12 @@ import UIKit
 
 class AnimeCell : UITableViewCell {
     
-    var anime: Anime? {
+    var animeViewModel: AnimeViewModel? {
         didSet {
-            guard let imageUrl = anime?.image_url else { return }
+            guard let imageUrl = animeViewModel?.imageUrl else { return }
             photoImageView.loadImage(imageUrl: imageUrl)
-            title.text = anime?.title
-            desc.text = anime?.synopsis
+            title.text = animeViewModel?.title
+            desc.text = animeViewModel?.desc
         }
     }
     

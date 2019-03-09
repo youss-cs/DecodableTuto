@@ -10,11 +10,9 @@ import UIKit
 
 class DetailAnimeCell : UITableViewCell {
     
-    var anime: Anime? {
+    var animeViewModel: AnimeViewModel? {
         didSet {
-            desc.text = anime?.synopsis
-            print(anime?.title)
-            print(anime?.synopsis)
+            desc.text = animeViewModel?.desc
         }
     }
     
